@@ -1,0 +1,15 @@
+<script>
+  var Hello = Object.create(HTMLElement.prototype);
+
+  var style = '<style>p { color: red; }</style>';
+
+  Hello.createdCallback = function() {
+    var accession = this.getAttribute('accession');
+    var shadow = this.createShadowRoot();
+    shadow.innerHTML = style + '<p>Hello Custom Elements! ' + accession + '</p>';
+  };
+
+  document.registerElement('x-hello', {
+    prototype: Hello,
+  });
+</script>
