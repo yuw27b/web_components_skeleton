@@ -1,1 +1,1 @@
-Web components sample files.
+### Web components smallest sample.
